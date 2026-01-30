@@ -1,0 +1,22 @@
+{
+  "total_predictions": 5,
+  "total_errors": 0,
+  "error_rate": 0.0,
+  "prediction_distribution": {
+    "BAIXO": 2,
+    "ALTO": 2,
+    "MÉDIO": 1
+  },
+  "latency": {},
+  "predictions_per_minute": 3.0412553588440048,
+  "session_uptime_seconds": 98.643476,
+  "session_start": "2026-01-30T17:24:24.977126",
+  "daily_counts": {
+    "2026-01-30": {
+      "1": 2,
+      "2": 3,
+      "0": 2
+    }
+  },
+  "errors": []
+}

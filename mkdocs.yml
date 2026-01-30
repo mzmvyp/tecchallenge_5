@@ -1,0 +1,57 @@
+site_name: Passos Mágicos ML
+site_description: Documentação do projeto de ML para predição de risco de defasagem escolar
+site_author: POSTECH/FIAP
+site_url: https://github.com/mzmvyp/tecchallenge_5
+
+repo_name: mzmvyp/tecchallenge_5
+repo_url: https://github.com/mzmvyp/tecchallenge_5
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+
+nav:
+  - Home: index.md
+  - API Reference: api_reference.md
+  - Pipeline de ML: pipeline.md
+  - Deployment: deployment.md

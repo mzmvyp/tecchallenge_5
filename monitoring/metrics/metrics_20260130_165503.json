@@ -1,0 +1,41 @@
+{
+  "total_predictions": 0,
+  "total_errors": 4,
+  "error_rate": 0,
+  "prediction_distribution": {},
+  "latency": {},
+  "predictions_per_minute": 0.0,
+  "session_uptime_seconds": 131.041451,
+  "session_start": "2026-01-30T16:52:52.215246",
+  "daily_counts": {},
+  "errors": [
+    {
+      "timestamp": "2026-01-30T16:52:52.838292",
+      "type": "PredictionError",
+      "message": "X has 29 features, but StandardScaler is expecting 15 features as input.",
+      "metadata": {}
+    },
+    {
+      "timestamp": "2026-01-30T16:52:52.838292",
+      "type": "HTTPException",
+      "message": "500: Erro ao realizar predição: X has 29 features, but StandardScaler is expecting 15 features as input.",
+      "metadata": {
+        "operation": "single_prediction"
+      }
+    },
+    {
+      "timestamp": "2026-01-30T16:53:47.024545",
+      "type": "PredictionError",
+      "message": "X has 29 features, but StandardScaler is expecting 15 features as input.",
+      "metadata": {}
+    },
+    {
+      "timestamp": "2026-01-30T16:53:47.024545",
+      "type": "HTTPException",
+      "message": "500: Erro ao realizar predição: X has 29 features, but StandardScaler is expecting 15 features as input.",
+      "metadata": {
+        "operation": "single_prediction"
+      }
+    }
+  ]
+}

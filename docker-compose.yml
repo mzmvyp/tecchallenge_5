@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: passos-magicos-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./models:/app/models
+      - ./monitoring:/app/monitoring
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=False
+      - MODEL_PATH=/app/models/model.joblib
+      - LOG_LEVEL=INFO
+      - LOG_FILE=/app/logs/app.log
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Serviço opcional para visualização de métricas
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+
+networks:
+  default:
+    name: passos-magicos-network
